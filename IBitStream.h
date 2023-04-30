@@ -21,6 +21,10 @@
 #include <algorithm>
 #include <memory>
 
+#ifndef __NETWORK_TYPES_H
+#include <NetworkTypes.h> //RakNet include
+#endif
+
 class IBitStream {
 public:
     IBitStream() 
