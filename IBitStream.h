@@ -21,10 +21,6 @@
 #include <algorithm>
 #include <memory>
 
-#ifndef __NETWORK_TYPES_H
-#include <NetworkTypes.h> //RakNet include
-#endif
-
 class IBitStream {
 public:
     IBitStream() 
@@ -35,9 +31,11 @@ public:
         : length_(length), data_(data), read_offset_(0), write_offset_(0)
     {}
 
+#ifdef __NETWORK_TYPES_H //RPCParameters it's structure from RakNet library (NetworkTypes.h)
     explicit IBitStream(const RPCParameters* params) 
         : IBitStream(params->input, (params->numberOfBitsOfData + 7) >> 3)
     {}
+#endif
 
     template<typename U>
     static constexpr int BITS_IN_T = sizeof(U) << 3;
@@ -250,4 +248,4 @@ private:
     int write_offset_;
 };
 
-#endif //I_BIT_STREAM
+#endif //I_BIT_STREAM_H

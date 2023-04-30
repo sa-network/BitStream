@@ -46,8 +46,12 @@ void RPC_Read2(RPCParameters* params) {
 	std::cout << i << f << str << '\n';
 }
 ```
+**Dependencies:**
+==========
+Structure from Raknet - RPCParameters
 
 **Functions:**
+==========
 ```cpp
 	* operator >> - read BitStream into variable;
 	* operator << - write variable or value into BitStream;
