@@ -1,9 +1,9 @@
 # BitStream (EXPERIMENTAL)
-==========
 
 Re-Implementation RakNet::BitStream mainly adapted to work with SA-MP.
 
-##The code has not been tested. Use at your own risk.
+**The code has not been tested. Use at your own risk.**
+**Functionality tested on client side only.**
 ==========
 
 **Example to use:**
@@ -47,7 +47,7 @@ void RPC_Read2(RPCParameters* params) {
 }
 ```
 
-**Functions::**
+**Functions:**
 ```cpp
 	* operator >> - read BitStream into variable;
 	* operator << - write variable or value into BitStream;
